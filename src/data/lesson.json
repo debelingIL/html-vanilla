@@ -1,0 +1,76 @@
+{
+  "LessonTitle": "Corners, Barns, and Streets",
+  "LessonActivities": 4,
+  "ActivitySequence": [
+    {
+      "number": 1,
+      "activityType": "introduction",
+      "background": "background-1.svg",
+      "stem": {
+        "trigger": "pageLoad",
+        "type": "audio",
+        "file": "intro-1.mp3"
+      },
+      "question": {
+        "type": "empty"
+      }
+    },
+    {
+      "number": 2,
+      "activityType": "shortTextButton",
+      "background": "background-2.svg",
+      "stem": {
+        "trigger": "pageLoad",
+        "type": "video",
+        "file": "question-1.mp4"
+      },
+      "feedbackType": "afterFirstIncorrect",
+      "question": {
+        "numOfOptions": 3,
+        "optionType": "shortTextButton",
+        "correctOption": 2,
+        "options": [
+          {
+            "option": 1,
+            "optionText": "Street",
+            "optionMedia": {
+              "type": "video",
+              "file": "barn-question.mp4",
+              "trigger": "itemLoad"
+            },
+            "optionFeedback": {
+              "type": "video",
+              "file": "street-feedback.mp4"
+            }
+          },
+          {
+            "option": 2,
+            "optionText": "Corner",
+            "optionMedia": {
+              "type": "video",
+              "file": "barn-question.mp4",
+              "trigger": "itemLoad"
+            },
+            "optionFeedback": {
+              "type": "video",
+              "file": "corner-feedback.mp4"
+            }
+          },
+          {
+            "option": 3,
+            "optionText": "Barn",
+            "optionMedia": {
+              "type": "video",
+              "file": "barn-question.mp4",
+              "trigger": "itemLoad"
+            },
+            "optionFeedback": {
+              "type": "video",
+              "file": "barn-feedback.mp4"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
