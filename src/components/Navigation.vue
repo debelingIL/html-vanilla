@@ -1,7 +1,9 @@
 <template>
   <div class="navigation">
     <div class="row fixed-bottom">
-      <div class="col align-self-start">Progress</div>
+      <div class="col align-self-start">
+        <img v-for="n in test" :key="n" class="progress-btn" src="../assets/idle-progress.svg" alt="progress">
+      </div>
       <div class="col align-self-end text-right">
         <button @click="$emit('nextActivity')">Next</button>
       </div>
@@ -25,5 +27,8 @@ export default {
 <style>
 .navigation {
   height: 100px;
+}
+.progress-btn {
+  padding-right: 8px;
 }
 </style>
