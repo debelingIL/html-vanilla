@@ -3,18 +3,23 @@
     <p>This is a lesson does this update</p>
     <Activity :activity="currentActivity"/>
     <Navigation :test="lesson.LessonActivities" v-on:nextActivity="Next()"/>
+    <Button :buttonText="buttonText" />
+    
   </div>
 </template>
 
 <script>
 import Navigation from "./Navigation";
 import Activity from "./Activity";
+import Button from "./Button";
+import lessonData from "../data/lesson.json";
 
 export default {
   name: "Lesson",
   components: {
     Navigation,
-    Activity
+    Activity,
+    Button
   },
   props: {
     lesson: Object
@@ -25,7 +30,8 @@ export default {
   },
   data() {
     return {
-      currentActivity: {}
+      currentActivity: {},
+      buttonText: lessonData.optionText
     };
   },
   methods: {

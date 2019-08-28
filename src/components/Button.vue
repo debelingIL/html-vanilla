@@ -1,8 +1,14 @@
 <template>
-  <div class="button" @click="changeState()" v-bind:class="{ buttonCurrentState }">{{buttonText}}</div>
+  <div class= "button" 
+  @click = "changeState()"
+  v-bind:class="buttonCurrentState"
+  > {{buttonText}} </div>
+  
 </template>
 
 <script>
+
+
 export default {
   name: "Button",
   props: {
@@ -17,14 +23,21 @@ export default {
     };
   },
   methods: {
-    changeState() {
-      this.buttonCurrentState = "selected";
+    changeState(){
+      
+      if(this.isSelected != true) {
+          this.buttonCurrentState = "selected";
+          this.isSelected = true; 
+      } else if (this.isSelected = true) {
+        this.buttonCurrentState = null;
+        this.isSelected = false;
+      }
+
     }
   }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 div.button {
   background-color: #ffffff;
