@@ -2,18 +2,29 @@
   <div class="navigation">
     <div class="row fixed-bottom">
       <div class="col align-self-start">
-        <img v-for="n in test" :key="n" class="progress-btn" src="../assets/idle-progress.svg" alt="progress">
+        <LessonProgress />
       </div>
       <div class="col align-self-end text-right">
-        <button @click="$emit('nextActivity')">Next</button>
+        <button @click="$store.dispatch('checkActivityResponse')">Next</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import LessonProgress from './LessonProgress'
+import { mapGetters } from 'vuex'
+
 export default {
   name: "Navigation",
+  components: {
+    LessonProgress
+  },
+  computed: {
+    ...mapGetters([
+      'activityProgress'
+    ])
+  },
   props: {
     test: Number
   },

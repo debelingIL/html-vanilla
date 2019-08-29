@@ -1,8 +1,8 @@
 <template>
   <div class="lesson container">
     <p>This is a lesson does this update</p>
-    <Activity :activity="currentActivity"/>
-    <Navigation :test="lesson.LessonActivities" v-on:nextActivity="Next()"/>
+    <Activity :activity="lesson.ActivitySequence[1]" @optionSelected="printResponse" :check="check"/>
+    <Navigation :test="lesson.LessonActivities" v-on:nextActivity="Next()" />
   </div>
 </template>
 
@@ -20,22 +20,23 @@ export default {
     lesson: Object
   },
   created() {
-    console.log("Component has been created!");
     this.currentActivity = this.lesson.ActivitySequence[0];
+    this.$store.dispatch("setLesson", this.lesson);
   },
   data() {
     return {
-      currentActivity: {}
+      currentActivity: {},
+      check: null
     };
   },
   methods: {
     Next() {
-      let currentIndex = this.lesson.ActivitySequence.indexOf(
-        this.currentActivity
-      );
-      console.log(currentIndex);
-
-      this.currentActivity = this.lesson.ActivitySequence[++currentIndex];
+      // let currentIndex = this.lesson.ActivitySequence.indexOf(this.currentActivity);
+      // this.currentActivity = this.lesson.ActivitySequence[++currentIndex];
+      this.check += 1;
+    },
+    printResponse (test) {
+      console.log(test)
     }
   }
 };

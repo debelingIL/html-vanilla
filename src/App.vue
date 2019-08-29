@@ -5,14 +5,12 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
 import Lesson from "./components/Lesson";
 import LessonData from "./data/lesson.json";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
     Lesson
   },
   data() {

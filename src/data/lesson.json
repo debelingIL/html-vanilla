@@ -1,72 +1,126 @@
 {
   "LessonTitle": "Corners, Barns, and Streets",
   "LessonActivities": 4,
+  "LessonIntroduction": {
+    "activityType": "introduction",
+    "background": "background-1.svg",
+    "stem": {
+      "trigger": "pageLoad",
+      "type": "audio",
+      "file": "intro-1.mp3"
+    },
+    "question": {
+      "type": "empty"
+    }
+  },
   "ActivitySequence": [
     {
-      "number": 1,
-      "activityType": "introduction",
-      "background": "background-1.svg",
-      "stem": {
-        "trigger": "pageLoad",
-        "type": "audio",
-        "file": "intro-1.mp3"
-      },
-      "question": {
-        "type": "empty"
-      }
-    },
-    {
-      "number": 2,
-      "activityType": "shortTextButton",
+      "activityId": 1,
+      "activityType": "multipleChoiceBasic",
       "background": "background-2.svg",
       "stem": {
-        "trigger": "pageLoad",
         "type": "video",
         "file": "question-1.mp4"
       },
       "feedbackType": "afterFirstIncorrect",
       "question": {
-        "numOfOptions": 3,
-        "optionType": "shortTextButton",
-        "correctOption": 2,
-        "options": [
+        "numOfResponses": 3,
+        "responseType": "shortTextButton",
+        "correctResponseId": 2,
+        "activityResponses": [
           {
-            "option": 1,
-            "optionText": "Street",
-            "optionMedia": {
+            "responseId": 1,
+            "responseText": "Street",
+            "responseMedia": {
               "type": "video",
               "file": "barn-question.mp4",
               "trigger": "itemLoad"
             },
-            "optionFeedback": {
+            "responseFeedback": {
               "type": "video",
               "file": "street-feedback.mp4"
             }
           },
           {
-            "option": 2,
-            "optionText": "Corner",
-            "optionMedia": {
+            "responseId": 2,
+            "responseText": "Corner",
+            "responseMedia": {
               "type": "video",
               "file": "barn-question.mp4",
               "trigger": "itemLoad"
             },
-            "optionFeedback": {
+            "responseFeedback": {
               "type": "video",
               "file": "corner-feedback.mp4"
             }
           },
           {
-            "option": 3,
-            "optionText": "Barn",
-            "optionMedia": {
+            "responseId": 3,
+            "responseText": "Barn",
+            "responseMedia": {
               "type": "video",
               "file": "barn-question.mp4",
               "trigger": "itemLoad"
             },
-            "optionFeedback": {
+            "responseFeedback": {
               "type": "video",
               "file": "barn-feedback.mp4"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "activityId": 2,
+      "activityType": "multipleChoiceBasic",
+      "background": "background-3.svg",
+      "stem": {
+        "type": "video",
+        "file": "question-2.mp4"
+      },
+      "feedbackType": "afterFirstIncorrect",
+      "question": {
+        "numOfResponses": 3,
+        "responseType": "shortTextButton",
+        "correctResponseId": 6,
+        "activityResponses": [
+          {
+            "responseId": 4,
+            "responseText": "Street",
+            "responseMedia": {
+              "type": "video",
+              "file": "barn-question.mp4",
+              "trigger": "itemLoad"
+            },
+            "responseFeedback": {
+              "type": "video",
+              "file": "street-feedback.mp4"
+            }
+          },
+          {
+            "responseId": 5,
+            "responseText": "Corner",
+            "responseMedia": {
+              "type": "video",
+              "file": "barn-question.mp4",
+              "trigger": "itemLoad"
+            },
+            "responseFeedback": {
+              "type": "video",
+              "file": "corner-feedback.mp4"
+            }
+          },
+          {
+            "responseId": 6,
+            "responseText": "Bridge",
+            "responseMedia": {
+              "type": "video",
+              "file": "bridge-question.mp4",
+              "trigger": "itemLoad"
+            },
+            "responseFeedback": {
+              "type": "video",
+              "file": "bridge-feedback.mp4"
             }
           }
         ]
